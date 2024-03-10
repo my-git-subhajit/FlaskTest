@@ -15,7 +15,8 @@ pipeline{
         stage('Running test case'){
             steps{
                 sh 'pip install -r requirements.txt'
-                sh 'python test_app.py'
+                sh 'chmod +x test_app.py'
+                sh 'python3 test_app.py'
             }
         }
         stage('Build docker image'){
