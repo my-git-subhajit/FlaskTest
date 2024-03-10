@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('Fetch code'){
             steps{
-                git branch: 'main', url: 'https://github.com/CharismaticOwl/FlaskTest.git'
+                git branch: 'main', url: 'https://github.com/my-git-subhajit/FlaskTest.git'
             }
         }
 
