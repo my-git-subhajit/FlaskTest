@@ -21,12 +21,12 @@ pipeline{
         }
         stage('Build docker image'){
            steps{
-             sh 'docker build -t iamgood1989/python-app:latest .'
+             sh 'sudo docker build -t iamgood1989/python-app:latest .'
            }
         }
         stage('push to dockerhub'){
            steps{
-             sh 'docker push iamgood1989/python-app:latest'
+             sh 'sudo docker push iamgood1989/python-app:latest'
            }
         }
         stage('Deploy') {
