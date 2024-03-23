@@ -1,15 +1,9 @@
-FROM python
-
+FROM python:3.9-slim
 WORKDIR /app
-
-COPY . /app
-
+COPY . .
 RUN pip install -r requirements.txt
+RUN pip install pytest
+RUN pytest test_app.py
+EXPOSE 6000
+CMD ["python", "app.py"]
 
-RUN chmod +x test_app.py
-
-RUN python test_app.py
-
-EXPOSE 3000
-
-CMD [ "python","app.py" ]
